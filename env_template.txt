@@ -1,0 +1,12 @@
+# OpenAI API配置
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_MODEL=gpt-4o-mini
+
+# 数据库配置
+SAKILA_DB_URL=mysql+pymysql://root:password@localhost:3306/sakila
+
+# Milvus配置
+MILVUS_DB_PATH=text2sql_milvus_sakila.db
+
+# 可选：如果使用代理
+# OPENAI_BASE_URL=https://api.openai.com/v1

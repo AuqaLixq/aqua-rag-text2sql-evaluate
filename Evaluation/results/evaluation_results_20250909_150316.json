@@ -1,0 +1,191 @@
+{
+  "evaluation_info": {
+    "timestamp": "2025-09-09T15:03:16.788220",
+    "config_file": "../configs/salila_config_hf_debug.yaml",
+    "total_queries": 1,
+    "evaluation_duration": 6.330979
+  },
+  "overall_metrics": {
+    "total_queries": 1,
+    "syntax_accuracy": {
+      "mean": 1.0,
+      "valid_rate": 1.0
+    },
+    "semantic_similarity": {
+      "mean": 0.9999999582767487
+    },
+    "retrieval_recall": {
+      "table_recall_mean": 1.0,
+      "column_recall_mean": 0.0,
+      "key_column_recall_mean": 0.0,
+      "weighted_recall_mean": 0.5,
+      "overall_recall_mean": 0.5,
+      "table_analysis": {
+        "total_expected": 1,
+        "total_retrieved": 3,
+        "total_matched": 1,
+        "overall_precision": 0.3333333333333333,
+        "overall_recall": 1.0,
+        "most_missed_tables": []
+      },
+      "column_analysis": {
+        "total_expected": 3,
+        "total_retrieved": 29,
+        "total_matched": 0,
+        "overall_precision": 0.0,
+        "overall_recall": 0.0,
+        "most_missed_columns": [
+          [
+            "first_name",
+            1
+          ],
+          [
+            "last_name",
+            1
+          ],
+          [
+            "actor_id",
+            1
+          ]
+        ]
+      },
+      "key_column_analysis": {
+        "total_expected": 1,
+        "total_matched": 0,
+        "overall_recall": 0.0,
+        "average_coverage": 0.0,
+        "most_missed_key_columns": [
+          [
+            "actor_id",
+            1
+          ]
+        ]
+      },
+      "sql_type_analysis": {
+        "type_distribution": {
+          "UNKNOWN": 1
+        },
+        "type_performance": {
+          "UNKNOWN": {
+            "count": 1,
+            "average_score": 0.0,
+            "min_score": 0.0,
+            "max_score": 0.0
+          }
+        }
+      }
+    },
+    "execution_accuracy": {
+      "mean": 1.0,
+      "success_rate": 1.0
+    },
+    "weighted_overall_score": 0.8999999916553498
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "question": "List all actors with their IDs and names.",
+      "expected_sql": "SELECT actor_id, first_name, last_name FROM actor;",
+      "generated_sql": "SELECT actor_id, first_name, last_name FROM actor;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 0.9999999582767487,
+        "embedding_similarity": 0.9999999403953552,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.5,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "actor_info",
+            "nicer_but_slower_film_list"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 3,
+          "retrieved_count": 29,
+          "matched_count": 0,
+          "missing_columns": [
+            "first_name",
+            "last_name",
+            "actor_id"
+          ],
+          "extra_columns": [
+            "actor.first_name",
+            "actor.UPDATE",
+            "actor.NOT",
+            "nicer_but_slower_film_list.AS",
+            "actor_info.UNDEFINED",
+            "actor_info.SQL",
+            "actor.actor_id",
+            "nicer_but_slower_film_list.UNDEFINED",
+            "actor.DEFAULT",
+            "actor.smallint",
+            "actor.timestamp",
+            "nicer_but_slower_film_list.SQL",
+            "actor_info.distinct",
+            "actor.last_name",
+            "actor.utf8mb4",
+            "actor_info.left",
+            "actor_info.ASC",
+            "actor_info.AS",
+            "actor_info.group",
+            "actor.last_update",
+            "actor_info.select",
+            "nicer_but_slower_film_list.group",
+            "nicer_but_slower_film_list.DEFINER",
+            "actor_info.order",
+            "nicer_but_slower_film_list.left",
+            "actor.NULL",
+            "actor.CURRENT_TIMESTAMP",
+            "actor_info.INVOKER",
+            "actor.InnoDB"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "actor_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.5
+      },
+      "error_message": null,
+      "evaluation_time": 6.330979
+    }
+  ]
+}

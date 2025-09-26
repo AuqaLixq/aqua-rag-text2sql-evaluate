@@ -1,0 +1,89 @@
+2025-09-09 15:06:11,241 - __main__ - INFO - 评估开始，配置文件: ../configs/salila_config_hf_debug.yaml
+2025-09-09 15:06:11,345 - root - INFO - 正在加载嵌入模型...
+2025-09-09 15:06:11,348 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-09 15:06:11,349 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-09 15:06:16,680 - root - INFO - 正在加载Text2SQL生成模型...
+2025-09-09 15:06:20,094 - root - INFO - Hugging Face模型加载完成
+2025-09-09 15:06:20,171 - root - INFO - Hugging Face Text2SQL系统初始化成功
+2025-09-09 15:06:20,198 - root - INFO - 知识库加载完成
+2025-09-09 15:06:20,198 - __main__ - INFO - 使用Hugging Face Text2SQL系统
+2025-09-09 15:06:20,204 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-09 15:06:20,208 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-09 15:06:23,783 - __main__ - INFO - 开始Text2SQL系统评估
+2025-09-09 15:06:23,784 - __main__ - INFO - 成功加载测试数据集，共 15 条记录
+2025-09-09 15:06:23,785 - __main__ - INFO - 📊 完整模式：将运行全部 15 条测试数据
+2025-09-09 15:06:23,795 - __main__ - INFO - 进度: 1/15
+2025-09-09 15:06:23,797 - __main__ - INFO - 评估查询 1: List all actors with their IDs and names.
+2025-09-09 15:06:29,913 - root - INFO - [RAG] Retrieved tables (top): ['actor', 'actor_info', 'nicer_but_slower_film_list']
+2025-09-09 15:06:29,915 - root - INFO - [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+2025-09-09 15:06:29,921 - __main__ - INFO - 进度: 2/15
+2025-09-09 15:06:29,922 - __main__ - INFO - 评估查询 2: Add a new actor named 'John Doe'.
+2025-09-09 15:06:33,589 - root - INFO - [RAG] Retrieved tables (top): ['actor']
+2025-09-09 15:06:33,590 - root - INFO - [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+2025-09-09 15:06:33,598 - __main__ - INFO - 进度: 3/15
+2025-09-09 15:06:33,599 - __main__ - INFO - 评估查询 3: Update the last name of actor with ID 1 to 'Smith'.
+2025-09-09 15:06:40,827 - root - INFO - [RAG] Retrieved tables (top): ['actor', 'film_actor', 'actor_info']
+2025-09-09 15:06:40,834 - root - INFO - [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+2025-09-09 15:06:40,835 - __main__ - INFO - 进度: 4/15
+2025-09-09 15:06:40,845 - __main__ - INFO - 评估查询 4: Delete the actor with ID 2.
+2025-09-09 15:06:47,686 - root - ERROR - SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_actor` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM actor WHERE actor_id = 2;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-09 15:06:47,691 - root - ERROR - SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_actor` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM actor WHERE actor_id = 2;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-09 15:06:49,310 - root - INFO - [RAG] Retrieved tables (top): ['actor', 'film_actor', 'actor_info']
+2025-09-09 15:06:49,315 - root - INFO - [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+2025-09-09 15:06:49,316 - __main__ - INFO - 进度: 5/15
+2025-09-09 15:06:49,316 - __main__ - INFO - 评估查询 5: Show all films and their descriptions.
+2025-09-09 15:06:58,263 - root - INFO - [RAG] Retrieved tables (top): ['film', 'film_text', 'nicer_but_slower_film_list']
+2025-09-09 15:06:58,270 - root - INFO - [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+2025-09-09 15:06:58,274 - __main__ - INFO - 进度: 6/15
+2025-09-09 15:06:58,274 - __main__ - INFO - 评估查询 6: Insert a new film titled 'New Movie' in language 1.
+2025-09-09 15:07:07,104 - root - INFO - [RAG] Retrieved tables (top): ['film_text', 'language', 'film']
+2025-09-09 15:07:07,110 - root - INFO - [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+2025-09-09 15:07:07,111 - __main__ - INFO - 进度: 7/15
+2025-09-09 15:07:07,111 - __main__ - INFO - 评估查询 7: Change the rating of film ID 3 to 'PG-13'.
+2025-09-09 15:07:14,102 - root - INFO - [RAG] Retrieved tables (top): ['film', 'nicer_but_slower_film_list']
+2025-09-09 15:07:14,110 - root - INFO - [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+2025-09-09 15:07:14,112 - __main__ - INFO - 进度: 8/15
+2025-09-09 15:07:14,119 - __main__ - INFO - 评估查询 8: Remove the film with ID 4.
+2025-09-09 15:07:18,838 - root - ERROR - SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_film` FOREIGN KEY (`film_id`) REFERENCES `film` (`film_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM film WHERE film_id = 4;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-09 15:07:18,843 - root - ERROR - SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_film` FOREIGN KEY (`film_id`) REFERENCES `film` (`film_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM film WHERE film_id = 4;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-09 15:07:20,333 - root - INFO - [RAG] Retrieved tables (top): ['film_category', 'film_actor', 'film_text']
+2025-09-09 15:07:20,339 - root - INFO - [RAG] Description samples (top): []
+2025-09-09 15:07:20,341 - __main__ - INFO - 进度: 9/15
+2025-09-09 15:07:20,343 - __main__ - INFO - 评估查询 9: Retrieve all categories.
+2025-09-09 15:07:25,183 - root - INFO - [RAG] Retrieved tables (top): ['category']
+2025-09-09 15:07:25,195 - root - INFO - [RAG] Description samples (top): ['category.category_id', 'category.last_update', 'category.name']
+2025-09-09 15:07:25,197 - __main__ - INFO - 进度: 10/15
+2025-09-09 15:07:25,208 - __main__ - INFO - 评估查询 10: Add a new category 'Horror'.
+2025-09-09 15:07:27,963 - root - INFO - [RAG] Retrieved tables (top): []
+2025-09-09 15:07:27,963 - root - INFO - [RAG] Description samples (top): []
+2025-09-09 15:07:27,968 - __main__ - INFO - 进度: 11/15
+2025-09-09 15:07:27,969 - __main__ - INFO - 评估查询 11: List all customers with their store and email.
+2025-09-09 15:07:31,750 - root - INFO - [RAG] Retrieved tables (top): ['customer_list']
+2025-09-09 15:07:31,758 - root - INFO - [RAG] Description samples (top): []
+2025-09-09 15:07:31,760 - __main__ - INFO - 进度: 12/15
+2025-09-09 15:07:31,766 - __main__ - INFO - 评估查询 12: Show inventory items for film ID 5.
+2025-09-09 15:07:38,129 - root - INFO - [RAG] Retrieved tables (top): ['film_text', 'film', 'inventory']
+2025-09-09 15:07:38,135 - root - INFO - [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+2025-09-09 15:07:38,136 - __main__ - INFO - 进度: 13/15
+2025-09-09 15:07:38,136 - __main__ - INFO - 评估查询 13: List recent rentals with rental date and customer.
+2025-09-09 15:07:45,406 - root - INFO - [RAG] Retrieved tables (top): ['sales_by_store', 'rental', 'film']
+2025-09-09 15:07:45,407 - root - INFO - [RAG] Description samples (top): ['rental.customer_id', 'rental.inventory_id', 'rental.last_update', 'rental.rental_date', 'rental.rental_id']
+2025-09-09 15:07:45,414 - __main__ - INFO - 进度: 14/15
+2025-09-09 15:07:45,415 - __main__ - INFO - 评估查询 14: Show all payments with amount and date.
+2025-09-09 15:07:51,456 - root - INFO - [RAG] Retrieved tables (top): ['payment', 'sales_by_store']
+2025-09-09 15:07:51,456 - root - INFO - [RAG] Description samples (top): ['payment.amount', 'payment.customer_id', 'payment.last_update', 'payment.payment_date', 'payment.payment_id']
+2025-09-09 15:07:51,457 - __main__ - INFO - 进度: 15/15
+2025-09-09 15:07:51,459 - __main__ - INFO - 评估查询 15: List all staff with names and email.
+2025-09-09 15:07:55,642 - root - INFO - [RAG] Retrieved tables (top): ['staff_list']
+2025-09-09 15:07:55,642 - root - INFO - [RAG] Description samples (top): []
+2025-09-09 15:07:55,655 - __main__ - INFO - 结果已保存到: ..\results\evaluation_results_20250909_150755.json
+2025-09-09 15:07:55,658 - __main__ - INFO - HTML报告已生成: ..\results\evaluation_report_20250909_150755.html
+2025-09-09 15:07:55,658 - __main__ - INFO - 评估完成

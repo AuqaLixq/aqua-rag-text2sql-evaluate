@@ -1,0 +1,76 @@
+# Salila Text2SQL 评估配置文件 - Hugging Face调试版本
+evaluation:
+  name: "Text2SQL-Sakila-Evaluation-HF"
+  description: "基于Sakila数据库的Text2SQL系统评估（Hugging Face）"
+  dataset_path: "../datasets/sakila_test.json"
+  output_path: "../results/"
+  log_level: "INFO"
+  mock_mode: false
+  debug_mode: false
+  
+# 数据库配置
+database:
+  type: "mysql"
+  connection_string: "mysql+pymysql://root:password@localhost:3306/sakila"
+  test_db_name: "sakila_test"
+  schema_path: "../../Data/sakila/ddl_statements.yaml"
+  description_path: "../../Data/sakila/db_description.yaml"
+  isolation_mode: true
+
+# Hugging Face模型配置
+model:
+  # 启用Hugging Face模型
+  use_huggingface: true
+  # 嵌入模型（用于向量检索）
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  # Text2SQL生成模型
+  text2sql_model: "microsoft/DialoGPT-medium"
+  # 备用模型（如果主模型加载失败）
+  fallback_model: "gpt2"
+  max_retries: 3
+  timeout: 60  # Hugging Face模型可能需要更长时间
+  # 生成参数
+  max_length: 200
+  temperature: 0.1
+  do_sample: true
+
+# 评估指标配置
+metrics:
+  execution_accuracy:
+    enabled: true
+    weight: 0.4
+    description: "SQL执行准确率"
+    
+  syntax_accuracy:
+    enabled: true
+    weight: 0.2
+    description: "SQL语法正确率"
+    
+  semantic_similarity:
+    enabled: true
+    weight: 0.2
+    description: "语义相似度"
+    threshold: 0.8
+    
+  retrieval_recall:
+    enabled: true
+    weight: 0.2
+    description: "检索召回率"
+    levels:
+      - "table_level"
+      - "column_level"
+      - "key_column_level"
+
+# RAG检索配置
+retrieval:
+  top_k_ddl: 3
+  top_k_examples: 3
+  top_k_descriptions: 5
+  similarity_threshold: 0.3  # 降低阈值，因为免费模型可能效果稍差
+
+# 报告配置
+reporting:
+  generate_html: true
+  generate_json: true
+  include_visualizations: true
+  detailed_error_analysis: true

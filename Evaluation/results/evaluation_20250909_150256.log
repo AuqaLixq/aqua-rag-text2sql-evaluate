@@ -1,0 +1,81 @@
+2025-09-09 15:02:56,890 - __main__ - INFO - 评估开始，配置文件: ../configs/salila_config_hf_debug.yaml
+2025-09-09 15:02:57,035 - root - INFO - 正在加载嵌入模型...
+2025-09-09 15:02:57,038 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-09 15:02:57,039 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-09 15:02:57,047 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-09 15:02:57,401 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-09-09 15:02:57,436 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-09-09 15:02:57,695 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-09-09 15:02:57,735 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-09-09 15:02:57,998 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-09-09 15:02:58,036 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-09-09 15:02:58,297 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2025-09-09 15:02:58,332 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2025-09-09 15:02:58,584 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-09-09 15:02:58,629 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-09-09 15:02:58,947 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2025-09-09 15:02:59,251 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2025-09-09 15:02:59,500 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-09-09 15:02:59,761 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2025-09-09 15:02:59,798 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2025-09-09 15:03:01,898 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-09-09 15:03:01,936 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2025-09-09 15:03:02,192 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-09-09 15:03:02,491 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2025-09-09 15:03:02,528 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2025-09-09 15:03:02,824 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6861
+2025-09-09 15:03:02,827 - root - INFO - 正在加载Text2SQL生成模型...
+2025-09-09 15:03:03,122 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-09-09 15:03:03,163 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/tokenizer_config.json HTTP/1.1" 200 0
+2025-09-09 15:03:03,451 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-09-09 15:03:03,853 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/config.json HTTP/1.1" 307 0
+2025-09-09 15:03:03,906 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/config.json HTTP/1.1" 200 0
+2025-09-09 15:03:04,205 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-09-09 15:03:04,209 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-09 15:03:04,639 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium HTTP/1.1" 200 4632
+2025-09-09 15:03:05,033 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/commits/main HTTP/1.1" 200 5803
+2025-09-09 15:03:05,386 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/discussions?p=0 HTTP/1.1" 200 12509
+2025-09-09 15:03:05,875 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/commits/refs%2Fpr%2F22 HTTP/1.1" 200 6768
+2025-09-09 15:03:06,140 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/refs%2Fpr%2F22/model.safetensors.index.json HTTP/1.1" 404 0
+2025-09-09 15:03:06,155 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/generation_config.json HTTP/1.1" 307 0
+2025-09-09 15:03:06,214 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/generation_config.json HTTP/1.1" 200 0
+2025-09-09 15:03:06,396 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/refs%2Fpr%2F22/model.safetensors HTTP/1.1" 302 0
+2025-09-09 15:03:06,484 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-09-09 15:03:06,484 - root - INFO - Hugging Face模型加载完成
+2025-09-09 15:03:06,692 - root - INFO - Hugging Face Text2SQL系统初始化成功
+2025-09-09 15:03:06,719 - root - INFO - 知识库加载完成
+2025-09-09 15:03:06,720 - __main__ - INFO - 使用Hugging Face Text2SQL系统
+2025-09-09 15:03:06,724 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-09 15:03:06,732 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-09 15:03:06,985 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-09-09 15:03:07,022 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-09-09 15:03:07,278 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-09-09 15:03:07,326 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-09-09 15:03:07,581 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-09-09 15:03:07,619 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-09-09 15:03:07,872 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2025-09-09 15:03:07,910 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2025-09-09 15:03:08,171 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-09-09 15:03:08,236 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-09-09 15:03:08,506 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2025-09-09 15:03:08,554 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2025-09-09 15:03:08,809 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-09-09 15:03:09,071 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2025-09-09 15:03:09,135 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2025-09-09 15:03:09,527 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-09-09 15:03:09,565 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2025-09-09 15:03:09,826 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-09-09 15:03:10,127 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2025-09-09 15:03:10,164 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2025-09-09 15:03:10,423 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6861
+2025-09-09 15:03:10,426 - __main__ - INFO - 开始Text2SQL系统评估
+2025-09-09 15:03:10,428 - __main__ - INFO - 成功加载测试数据集，共 15 条记录
+2025-09-09 15:03:10,434 - __main__ - INFO - 🔧 调试模式：从 15 条数据中只运行第一条测试数据
+2025-09-09 15:03:10,436 - __main__ - INFO -    测试问题: List all actors with their IDs and names.
+2025-09-09 15:03:10,444 - __main__ - INFO - 进度: 1/1
+2025-09-09 15:03:10,446 - __main__ - INFO - 评估查询 1: List all actors with their IDs and names.
+2025-09-09 15:03:16,779 - root - INFO - [RAG] Retrieved tables (top): ['actor', 'actor_info', 'nicer_but_slower_film_list']
+2025-09-09 15:03:16,779 - root - INFO - [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+2025-09-09 15:03:16,790 - __main__ - INFO - 结果已保存到: ..\results\evaluation_results_20250909_150316.json
+2025-09-09 15:03:16,793 - __main__ - INFO - HTML报告已生成: ..\results\evaluation_report_20250909_150316.html
+2025-09-09 15:03:16,795 - __main__ - INFO - 评估完成

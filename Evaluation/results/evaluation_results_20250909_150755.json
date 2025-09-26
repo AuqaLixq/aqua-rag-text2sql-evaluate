@@ -1,0 +1,1639 @@
+{
+  "evaluation_info": {
+    "timestamp": "2025-09-09T15:07:55.650849",
+    "config_file": "../configs/salila_config_hf_debug.yaml",
+    "total_queries": 15,
+    "evaluation_duration": 91.753578
+  },
+  "overall_metrics": {
+    "total_queries": 15,
+    "syntax_accuracy": {
+      "mean": 1.0,
+      "valid_rate": 1.0
+    },
+    "semantic_similarity": {
+      "mean": 0.9999999944368999
+    },
+    "retrieval_recall": {
+      "table_recall_mean": 0.7333333333333333,
+      "column_recall_mean": 0.2,
+      "key_column_recall_mean": 0.22888888888888886,
+      "weighted_recall_mean": 0.503904761904762,
+      "overall_recall_mean": 0.503904761904762,
+      "table_analysis": {
+        "total_expected": 15,
+        "total_retrieved": 32,
+        "total_matched": 11,
+        "overall_precision": 0.34375,
+        "overall_recall": 0.7333333333333333,
+        "most_missed_tables": [
+          [
+            "film",
+            1
+          ],
+          [
+            "category",
+            1
+          ],
+          [
+            "customer",
+            1
+          ],
+          [
+            "staff",
+            1
+          ]
+        ]
+      },
+      "column_analysis": {
+        "total_expected": 61,
+        "total_retrieved": 399,
+        "total_matched": 18,
+        "overall_precision": 0.045112781954887216,
+        "overall_recall": 0.29508196721311475,
+        "most_missed_columns": [
+          [
+            "last_name",
+            4
+          ],
+          [
+            "film_id",
+            4
+          ],
+          [
+            "first_name",
+            3
+          ],
+          [
+            "actor_id",
+            3
+          ],
+          [
+            "customer_id",
+            3
+          ]
+        ]
+      },
+      "key_column_analysis": {
+        "total_expected": 26,
+        "total_matched": 10,
+        "overall_recall": 0.38461538461538464,
+        "average_coverage": 0.1111111111111111,
+        "most_missed_key_columns": [
+          [
+            "film_id",
+            4
+          ],
+          [
+            "actor_id",
+            3
+          ],
+          [
+            "category_id",
+            1
+          ],
+          [
+            "customer.store_id",
+            1
+          ],
+          [
+            "customer_id",
+            1
+          ]
+        ]
+      },
+      "sql_type_analysis": {
+        "type_distribution": {
+          "UNKNOWN": 15
+        },
+        "type_performance": {
+          "UNKNOWN": {
+            "count": 15,
+            "average_score": 0.0,
+            "min_score": 0.0,
+            "max_score": 0.0
+          }
+        }
+      }
+    },
+    "execution_accuracy": {
+      "mean": 0.8666666666666667,
+      "success_rate": 0.8666666666666667
+    },
+    "weighted_overall_score": 0.8474476179349991
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "question": "List all actors with their IDs and names.",
+      "expected_sql": "SELECT actor_id, first_name, last_name FROM actor;",
+      "generated_sql": "SELECT actor_id, first_name, last_name FROM actor;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 0.9999999582767487,
+        "embedding_similarity": 0.9999999403953552,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.5,
+        "overall_recall": 0.75,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "actor_info",
+            "nicer_but_slower_film_list"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 6,
+          "retrieved_count": 29,
+          "matched_count": 3,
+          "missing_columns": [
+            "first_name",
+            "last_name",
+            "actor_id"
+          ],
+          "extra_columns": [
+            "actor_info.SQL",
+            "actor.NULL",
+            "actor.CURRENT_TIMESTAMP",
+            "nicer_but_slower_film_list.DEFINER",
+            "actor_info.ASC",
+            "actor_info.order",
+            "nicer_but_slower_film_list.left",
+            "actor_info.select",
+            "actor.utf8mb4",
+            "nicer_but_slower_film_list.SQL",
+            "actor.UPDATE",
+            "nicer_but_slower_film_list.UNDEFINED",
+            "nicer_but_slower_film_list.group",
+            "actor_info.INVOKER",
+            "actor.last_update",
+            "actor_info.distinct",
+            "actor.InnoDB",
+            "actor.smallint",
+            "actor.NOT",
+            "actor.timestamp",
+            "actor_info.AS",
+            "actor_info.group",
+            "nicer_but_slower_film_list.AS",
+            "actor.DEFAULT",
+            "actor_info.left",
+            "actor_info.UNDEFINED"
+          ],
+          "precision": 0.10344827586206896,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 1,
+          "matched_count": 1,
+          "missing_key_columns": [
+            "actor_id"
+          ],
+          "key_column_coverage": 0.16666666666666666,
+          "precision": 0.034482758620689655,
+          "recall": 0.5
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.75
+      },
+      "error_message": null,
+      "evaluation_time": 6.124117
+    },
+    {
+      "id": 2,
+      "question": "Add a new actor named 'John Doe'.",
+      "expected_sql": "INSERT INTO actor (first_name, last_name) VALUES ('John', 'Doe');",
+      "generated_sql": "INSERT INTO actor (first_name, last_name) VALUES ('John', 'Doe');",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.7142857142857143,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 1,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 13,
+          "matched_count": 0,
+          "missing_columns": [
+            "first_name",
+            "last_name"
+          ],
+          "extra_columns": [
+            "actor.UPDATE",
+            "actor.NULL",
+            "actor.CURRENT_TIMESTAMP",
+            "actor.last_update",
+            "actor.InnoDB",
+            "actor.smallint",
+            "actor.actor_id",
+            "actor.NOT",
+            "actor.timestamp",
+            "actor.first_name",
+            "actor.utf8mb4",
+            "actor.DEFAULT",
+            "actor.last_name"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 0,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.7142857142857143
+      },
+      "error_message": null,
+      "evaluation_time": 3.66983
+    },
+    {
+      "id": 3,
+      "question": "Update the last name of actor with ID 1 to 'Smith'.",
+      "expected_sql": "UPDATE actor SET last_name = 'Smith' WHERE actor_id = 1;",
+      "generated_sql": "UPDATE actor SET last_name = 'Smith' WHERE actor_id = 1;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.5,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "actor_info",
+            "film_actor"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 33,
+          "matched_count": 0,
+          "missing_columns": [
+            "last_name",
+            "actor_id"
+          ],
+          "extra_columns": [
+            "actor_info.SQL",
+            "actor.NULL",
+            "actor.CURRENT_TIMESTAMP",
+            "film_actor.ON",
+            "film_actor.timestamp",
+            "actor_info.select",
+            "actor.utf8mb4",
+            "film_actor.NOT",
+            "actor.last_update",
+            "film_actor.utf8mb4",
+            "actor_info.distinct",
+            "actor.smallint",
+            "actor.actor_id",
+            "actor_info.AS",
+            "film_actor.UPDATE",
+            "actor_info.UNDEFINED",
+            "actor_info.ASC",
+            "film_actor.smallint",
+            "actor_info.order",
+            "film_actor.RESTRICT",
+            "actor.first_name",
+            "actor.last_name",
+            "actor.UPDATE",
+            "actor_info.INVOKER",
+            "actor.InnoDB",
+            "film_actor.NULL",
+            "actor.NOT",
+            "film_actor.CURRENT_TIMESTAMP",
+            "actor.timestamp",
+            "actor_info.group",
+            "actor.DEFAULT",
+            "actor_info.left",
+            "film_actor.InnoDB"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "actor_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.5
+      },
+      "error_message": null,
+      "evaluation_time": 7.229909
+    },
+    {
+      "id": 4,
+      "question": "Delete the actor with ID 2.",
+      "expected_sql": "DELETE FROM actor WHERE actor_id = 2;",
+      "generated_sql": "DELETE FROM actor WHERE actor_id = 2;",
+      "execution_accuracy": {
+        "execution_accuracy": 0.0,
+        "generated_executable": false,
+        "expected_executable": false,
+        "results_match": false,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.5,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "actor_info",
+            "film_actor"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 33,
+          "matched_count": 0,
+          "missing_columns": [
+            "actor_id"
+          ],
+          "extra_columns": [
+            "actor_info.SQL",
+            "actor.NULL",
+            "actor.CURRENT_TIMESTAMP",
+            "film_actor.ON",
+            "film_actor.timestamp",
+            "actor_info.select",
+            "actor.utf8mb4",
+            "film_actor.NOT",
+            "actor.last_update",
+            "film_actor.utf8mb4",
+            "actor_info.distinct",
+            "actor.smallint",
+            "actor.actor_id",
+            "actor_info.AS",
+            "film_actor.UPDATE",
+            "actor_info.UNDEFINED",
+            "actor_info.ASC",
+            "film_actor.smallint",
+            "actor_info.order",
+            "film_actor.RESTRICT",
+            "actor.first_name",
+            "actor.last_name",
+            "actor.UPDATE",
+            "actor_info.INVOKER",
+            "actor.InnoDB",
+            "film_actor.NULL",
+            "actor.NOT",
+            "film_actor.CURRENT_TIMESTAMP",
+            "actor.timestamp",
+            "actor_info.group",
+            "actor.DEFAULT",
+            "actor_info.left",
+            "film_actor.InnoDB"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "actor_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.5
+      },
+      "error_message": null,
+      "evaluation_time": 8.461909
+    },
+    {
+      "id": 5,
+      "question": "Show all films and their descriptions.",
+      "expected_sql": "SELECT film_id, title, description FROM film;",
+      "generated_sql": "SELECT film_id, title, description FROM film;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.5,
+        "overall_recall": 0.75,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "nicer_but_slower_film_list",
+            "film_text"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 6,
+          "retrieved_count": 38,
+          "matched_count": 3,
+          "missing_columns": [
+            "film_id",
+            "title",
+            "description"
+          ],
+          "extra_columns": [
+            "nicer_but_slower_film_list.DEFINER",
+            "film.UPDATE",
+            "film.original_language_id",
+            "film.release_year",
+            "film.NULL",
+            "film.timestamp",
+            "film.Deleted",
+            "film.length",
+            "film.rental_duration",
+            "film.DEFAULT",
+            "film.replacement_cost",
+            "film.Behind",
+            "nicer_but_slower_film_list.group",
+            "film_text.utf8mb4",
+            "film.NOT",
+            "film_text.FULLTEXT",
+            "film.rental_rate",
+            "film_text.InnoDB",
+            "film.year",
+            "film.CURRENT_TIMESTAMP",
+            "film_text.NOT",
+            "film.last_update",
+            "nicer_but_slower_film_list.left",
+            "film_text.smallint",
+            "film.rating",
+            "film.RESTRICT",
+            "film.language_id",
+            "nicer_but_slower_film_list.SQL",
+            "nicer_but_slower_film_list.UNDEFINED",
+            "film.smallint",
+            "film.InnoDB",
+            "film.ON",
+            "nicer_but_slower_film_list.AS",
+            "film.tinyint",
+            "film.utf8mb4"
+          ],
+          "precision": 0.07894736842105263,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 1,
+          "matched_count": 1,
+          "missing_key_columns": [
+            "film_id"
+          ],
+          "key_column_coverage": 0.16666666666666666,
+          "precision": 0.02631578947368421,
+          "recall": 0.5
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.75
+      },
+      "error_message": null,
+      "evaluation_time": 8.953794
+    },
+    {
+      "id": 6,
+      "question": "Insert a new film titled 'New Movie' in language 1.",
+      "expected_sql": "INSERT INTO film (title, language_id) VALUES ('New Movie', 1);",
+      "generated_sql": "INSERT INTO film (title, language_id) VALUES ('New Movie', 1);",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.7142857142857143,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "film_text",
+            "language"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 41,
+          "matched_count": 0,
+          "missing_columns": [
+            "language_id",
+            "title"
+          ],
+          "extra_columns": [
+            "film.UPDATE",
+            "film.original_language_id",
+            "film.release_year",
+            "language.NOT",
+            "language.timestamp",
+            "film.NULL",
+            "film.timestamp",
+            "film.Deleted",
+            "film.length",
+            "film.rental_duration",
+            "film.DEFAULT",
+            "language.UPDATE",
+            "film.replacement_cost",
+            "film.Behind",
+            "language.utf8mb4",
+            "film_text.utf8mb4",
+            "film_text.FULLTEXT",
+            "film.NOT",
+            "film.rental_rate",
+            "language.InnoDB",
+            "film.description",
+            "film_text.InnoDB",
+            "film.year",
+            "film_text.NOT",
+            "film.CURRENT_TIMESTAMP",
+            "film.last_update",
+            "film_text.smallint",
+            "film.rating",
+            "film.title",
+            "language.NULL",
+            "language.CURRENT_TIMESTAMP",
+            "film.RESTRICT",
+            "language.tinyint",
+            "film.language_id",
+            "film.film_id",
+            "film.smallint",
+            "film.InnoDB",
+            "film.ON",
+            "language.DEFAULT",
+            "film.tinyint",
+            "film.utf8mb4"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 0,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.7142857142857143
+      },
+      "error_message": null,
+      "evaluation_time": 8.836588
+    },
+    {
+      "id": 7,
+      "question": "Change the rating of film ID 3 to 'PG-13'.",
+      "expected_sql": "UPDATE film SET rating = 'PG-13' WHERE film_id = 3;",
+      "generated_sql": "UPDATE film SET rating = 'PG-13' WHERE film_id = 3;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.5,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 2,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "nicer_but_slower_film_list"
+          ],
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 33,
+          "matched_count": 0,
+          "missing_columns": [
+            "rating",
+            "film_id"
+          ],
+          "extra_columns": [
+            "nicer_but_slower_film_list.DEFINER",
+            "film.UPDATE",
+            "film.original_language_id",
+            "film.release_year",
+            "film.NULL",
+            "film.timestamp",
+            "film.Deleted",
+            "film.length",
+            "film.rental_duration",
+            "film.DEFAULT",
+            "film.replacement_cost",
+            "film.Behind",
+            "nicer_but_slower_film_list.group",
+            "film.NOT",
+            "film.rental_rate",
+            "film.description",
+            "film.year",
+            "film.CURRENT_TIMESTAMP",
+            "film.last_update",
+            "nicer_but_slower_film_list.left",
+            "film.rating",
+            "film.title",
+            "film.RESTRICT",
+            "film.language_id",
+            "nicer_but_slower_film_list.SQL",
+            "film.film_id",
+            "nicer_but_slower_film_list.UNDEFINED",
+            "film.smallint",
+            "film.InnoDB",
+            "film.ON",
+            "nicer_but_slower_film_list.AS",
+            "film.tinyint",
+            "film.utf8mb4"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "film_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.5
+      },
+      "error_message": null,
+      "evaluation_time": 6.999417
+    },
+    {
+      "id": 8,
+      "question": "Remove the film with ID 4.",
+      "expected_sql": "DELETE FROM film WHERE film_id = 4;",
+      "generated_sql": "DELETE FROM film WHERE film_id = 4;",
+      "execution_accuracy": {
+        "execution_accuracy": 0.0,
+        "generated_executable": false,
+        "expected_executable": false,
+        "results_match": false,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 0.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.0,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 0,
+          "missing_tables": [
+            "film"
+          ],
+          "extra_tables": [
+            "film_category",
+            "film_actor",
+            "film_text"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 26,
+          "matched_count": 0,
+          "missing_columns": [
+            "film_id"
+          ],
+          "extra_columns": [
+            "film_category.NOT",
+            "film_actor.smallint",
+            "film_actor.ON",
+            "film_category.tinyint",
+            "film_text.NOT",
+            "film_actor.RESTRICT",
+            "film_text.smallint",
+            "film_category.smallint",
+            "film_category.RESTRICT",
+            "film_actor.timestamp",
+            "film_category.ON",
+            "film_category.NULL",
+            "film_category.CURRENT_TIMESTAMP",
+            "film_category.UPDATE",
+            "film_actor.NOT",
+            "film_text.utf8mb4",
+            "film_text.FULLTEXT",
+            "film_actor.utf8mb4",
+            "film_category.timestamp",
+            "film_actor.NULL",
+            "film_category.InnoDB",
+            "film_actor.CURRENT_TIMESTAMP",
+            "film_actor.UPDATE",
+            "film_actor.InnoDB",
+            "film_text.InnoDB",
+            "film_category.utf8mb4"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "film_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.0
+      },
+      "error_message": null,
+      "evaluation_time": 6.221645
+    },
+    {
+      "id": 9,
+      "question": "Retrieve all categories.",
+      "expected_sql": "SELECT category_id, name FROM category;",
+      "generated_sql": "SELECT category_id, name FROM category;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.5,
+        "overall_recall": 0.75,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 1,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 4,
+          "retrieved_count": 12,
+          "matched_count": 2,
+          "missing_columns": [
+            "name",
+            "category_id"
+          ],
+          "extra_columns": [
+            "category.NOT",
+            "category.CURRENT_TIMESTAMP",
+            "category.last_update",
+            "category.InnoDB",
+            "category.utf8mb4",
+            "category.NULL",
+            "category.tinyint",
+            "category.UPDATE",
+            "category.DEFAULT",
+            "category.timestamp"
+          ],
+          "precision": 0.16666666666666666,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 1,
+          "matched_count": 1,
+          "missing_key_columns": [
+            "category_id"
+          ],
+          "key_column_coverage": 0.25,
+          "precision": 0.08333333333333333,
+          "recall": 0.5
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.75
+      },
+      "error_message": null,
+      "evaluation_time": 4.854077
+    },
+    {
+      "id": 10,
+      "question": "Add a new category 'Horror'.",
+      "expected_sql": "INSERT INTO category (name) VALUES ('Horror');",
+      "generated_sql": "INSERT INTO category (name) VALUES ('Horror');",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 0.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.0,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_tables": [
+            "category"
+          ],
+          "extra_tables": [],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "column_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_columns": [
+            "name"
+          ],
+          "extra_columns": [],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 0,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.0
+      },
+      "error_message": null,
+      "evaluation_time": 2.755356
+    },
+    {
+      "id": 11,
+      "question": "List all customers with their store and email.",
+      "expected_sql": "SELECT customer_id, store_id, email FROM customer;",
+      "generated_sql": "SELECT customer_id, store_id, email FROM customer;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 0.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.0,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 1,
+          "matched_count": 0,
+          "missing_tables": [
+            "customer"
+          ],
+          "extra_tables": [
+            "customer_list"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "column_analysis": {
+          "expected_count": 6,
+          "retrieved_count": 5,
+          "matched_count": 0,
+          "missing_columns": [
+            "customer_id",
+            "customer.store_id",
+            "email",
+            "store_id",
+            "customer.email",
+            "customer.customer_id"
+          ],
+          "extra_columns": [
+            "customer_list.zip",
+            "customer_list.AS",
+            "customer_list.SQL",
+            "customer_list.UNDEFINED",
+            "customer_list.DEFINER"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 3,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "customer.store_id",
+            "customer_id",
+            "customer.customer_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.0
+      },
+      "error_message": null,
+      "evaluation_time": 3.783836
+    },
+    {
+      "id": 12,
+      "question": "Show inventory items for film ID 5.",
+      "expected_sql": "SELECT inventory_id, film_id, store_id FROM inventory WHERE film_id = 5;",
+      "generated_sql": "SELECT inventory_id, film_id, store_id FROM inventory WHERE film_id = 5;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 0.9999999582767487,
+        "embedding_similarity": 0.9999999403953552,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.6,
+        "overall_recall": 0.7799999999999999,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "film",
+            "film_text"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 6,
+          "retrieved_count": 49,
+          "matched_count": 3,
+          "missing_columns": [
+            "film_id",
+            "inventory_id",
+            "store_id"
+          ],
+          "extra_columns": [
+            "film.UPDATE",
+            "film.original_language_id",
+            "film.release_year",
+            "inventory.InnoDB",
+            "inventory.timestamp",
+            "film.NULL",
+            "film.timestamp",
+            "film.Deleted",
+            "film.length",
+            "film.rental_duration",
+            "film.DEFAULT",
+            "film.replacement_cost",
+            "film.Behind",
+            "film_text.utf8mb4",
+            "film_text.FULLTEXT",
+            "film.NOT",
+            "film.rental_rate",
+            "film.description",
+            "film_text.InnoDB",
+            "film.year",
+            "film_text.NOT",
+            "film.CURRENT_TIMESTAMP",
+            "film.last_update",
+            "inventory.smallint",
+            "film_text.smallint",
+            "inventory.NULL",
+            "inventory.ON",
+            "film.rating",
+            "inventory.DEFAULT",
+            "film.title",
+            "film.RESTRICT",
+            "inventory.UPDATE",
+            "inventory.utf8mb4",
+            "inventory.NOT",
+            "film.language_id",
+            "film.film_id",
+            "inventory.CURRENT_TIMESTAMP",
+            "inventory.last_update",
+            "film.smallint",
+            "film.InnoDB",
+            "inventory.mediumint",
+            "film.ON",
+            "inventory.tinyint",
+            "inventory.RESTRICT",
+            "film.tinyint",
+            "film.utf8mb4"
+          ],
+          "precision": 0.061224489795918366,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 5,
+          "retrieved_count": 3,
+          "matched_count": 3,
+          "missing_key_columns": [
+            "film_id",
+            "inventory_id"
+          ],
+          "key_column_coverage": 0.5,
+          "precision": 0.061224489795918366,
+          "recall": 0.6
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.7799999999999999
+      },
+      "error_message": null,
+      "evaluation_time": 6.370599
+    },
+    {
+      "id": 13,
+      "question": "List recent rentals with rental date and customer.",
+      "expected_sql": "SELECT rental_id, rental_date, customer_id FROM rental ORDER BY rental_date DESC LIMIT 10;",
+      "generated_sql": "SELECT rental_id, rental_date, customer_id FROM rental ORDER BY rental_date DESC LIMIT 10;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.6666666666666666,
+        "overall_recall": 0.7999999999999999,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 3,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "film",
+            "sales_by_store"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 6,
+          "retrieved_count": 56,
+          "matched_count": 3,
+          "missing_columns": [
+            "rental_id",
+            "rental_date",
+            "customer_id"
+          ],
+          "extra_columns": [
+            "sales_by_store.group",
+            "film.UPDATE",
+            "film.original_language_id",
+            "film.release_year",
+            "rental.CURRENT_TIMESTAMP",
+            "rental.tinyint",
+            "sales_by_store.DEFINER",
+            "rental.NOT",
+            "film.NULL",
+            "film.timestamp",
+            "sales_by_store.SQL",
+            "film.Deleted",
+            "film.length",
+            "film.rental_duration",
+            "film.DEFAULT",
+            "rental.timestamp",
+            "rental.last_update",
+            "rental.UPDATE",
+            "rental.RESTRICT",
+            "film.replacement_cost",
+            "film.Behind",
+            "sales_by_store.AS",
+            "film.NOT",
+            "film.rental_rate",
+            "rental.return_date",
+            "rental.DEFAULT",
+            "film.description",
+            "rental.smallint",
+            "rental.int",
+            "rental.InnoDB",
+            "sales_by_store.UNDEFINED",
+            "rental.utf8mb4",
+            "film.year",
+            "film.CURRENT_TIMESTAMP",
+            "film.last_update",
+            "film.rating",
+            "film.title",
+            "film.RESTRICT",
+            "film.language_id",
+            "rental.inventory_id",
+            "film.film_id",
+            "sales_by_store.order",
+            "rental.datetime",
+            "rental.mediumint",
+            "film.smallint",
+            "film.InnoDB",
+            "rental.staff_id",
+            "rental.UNIQUE",
+            "film.ON",
+            "rental.ON",
+            "film.tinyint",
+            "film.utf8mb4",
+            "rental.NULL"
+          ],
+          "precision": 0.05357142857142857,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 3,
+          "retrieved_count": 2,
+          "matched_count": 2,
+          "missing_key_columns": [
+            "rental_id"
+          ],
+          "key_column_coverage": 0.3333333333333333,
+          "precision": 0.03571428571428571,
+          "recall": 0.6666666666666666
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.7999999999999999
+      },
+      "error_message": null,
+      "evaluation_time": 7.273177
+    },
+    {
+      "id": 14,
+      "question": "Show all payments with amount and date.",
+      "expected_sql": "SELECT payment_id, customer_id, amount, payment_date FROM payment;",
+      "generated_sql": "SELECT payment_id, customer_id, amount, payment_date FROM payment;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 1.0,
+        "column_recall": 0.5,
+        "key_column_recall": 0.6666666666666666,
+        "overall_recall": 0.7999999999999999,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 2,
+          "matched_count": 1,
+          "missing_tables": [],
+          "extra_tables": [
+            "sales_by_store"
+          ],
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "column_analysis": {
+          "expected_count": 8,
+          "retrieved_count": 26,
+          "matched_count": 4,
+          "missing_columns": [
+            "payment_id",
+            "payment_date",
+            "customer_id",
+            "amount"
+          ],
+          "extra_columns": [
+            "sales_by_store.group",
+            "payment.NOT",
+            "sales_by_store.DEFINER",
+            "sales_by_store.SQL",
+            "payment.tinyint",
+            "payment.utf8mb4",
+            "sales_by_store.AS",
+            "payment.UPDATE",
+            "payment.timestamp",
+            "payment.InnoDB",
+            "payment.last_update",
+            "payment.RESTRICT",
+            "sales_by_store.UNDEFINED",
+            "payment.datetime",
+            "payment.staff_id",
+            "payment.smallint",
+            "payment.ON",
+            "payment.rental_id",
+            "payment.DEFAULT",
+            "sales_by_store.order",
+            "payment.int",
+            "payment.SET"
+          ],
+          "precision": 0.15384615384615385,
+          "recall": 0.5
+        },
+        "key_column_analysis": {
+          "expected_count": 3,
+          "retrieved_count": 2,
+          "matched_count": 2,
+          "missing_key_columns": [
+            "payment_id"
+          ],
+          "key_column_coverage": 0.25,
+          "precision": 0.07692307692307693,
+          "recall": 0.6666666666666666
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.7999999999999999
+      },
+      "error_message": null,
+      "evaluation_time": 6.042368
+    },
+    {
+      "id": 15,
+      "question": "List all staff with names and email.",
+      "expected_sql": "SELECT staff_id, first_name, last_name, email FROM staff;",
+      "generated_sql": "SELECT staff_id, first_name, last_name, email FROM staff;",
+      "execution_accuracy": {
+        "execution_accuracy": 1.0,
+        "generated_executable": true,
+        "expected_executable": true,
+        "results_match": true,
+        "error_message": null
+      },
+      "syntax_accuracy": {
+        "syntax_accuracy": 1.0,
+        "is_valid": true,
+        "parse_error": null
+      },
+      "semantic_similarity": {
+        "semantic_similarity": 1.0,
+        "embedding_similarity": 1.0,
+        "structural_similarity": 1.0,
+        "error_message": null
+      },
+      "retrieval_recall": {
+        "table_recall": 0.0,
+        "column_recall": 0.0,
+        "key_column_recall": 0.0,
+        "overall_recall": 0.0,
+        "table_analysis": {
+          "expected_count": 1,
+          "retrieved_count": 1,
+          "matched_count": 0,
+          "missing_tables": [
+            "staff"
+          ],
+          "extra_tables": [
+            "staff_list"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "column_analysis": {
+          "expected_count": 8,
+          "retrieved_count": 5,
+          "matched_count": 0,
+          "missing_columns": [
+            "staff.last_name",
+            "staff.email",
+            "email",
+            "last_name",
+            "staff.first_name",
+            "staff_id",
+            "first_name",
+            "staff.staff_id"
+          ],
+          "extra_columns": [
+            "staff_list.DEFINER",
+            "staff_list.AS",
+            "staff_list.UNDEFINED",
+            "staff_list.SQL",
+            "staff_list.zip"
+          ],
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "key_column_analysis": {
+          "expected_count": 2,
+          "retrieved_count": 0,
+          "matched_count": 0,
+          "missing_key_columns": [
+            "staff_id",
+            "staff.staff_id"
+          ],
+          "key_column_coverage": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "sql_type_analysis": {
+          "sql_type": "UNKNOWN",
+          "type_specific_score": 0.0,
+          "critical_elements_found": [],
+          "critical_elements_missing": []
+        },
+        "weighted_recall": 0.0
+      },
+      "error_message": null,
+      "evaluation_time": 4.176956
+    }
+  ]
+}

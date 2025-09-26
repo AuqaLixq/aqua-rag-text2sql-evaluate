@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "question": "List all actors with their IDs and names.",
+    "sql": "SELECT actor_id, first_name, last_name FROM actor;",
+    "expected_tables": ["actor"],
+    "expected_columns": ["actor_id", "first_name", "last_name"],
+    "key_columns": ["actor_id"],
+    "difficulty": "easy",
+    "query_type": "select"
+  },
+  {
+    "id": 2,
+    "question": "Add a new actor named 'John Doe'.",
+    "sql": "INSERT INTO actor (first_name, last_name) VALUES ('John', 'Doe');",
+    "expected_tables": ["actor"],
+    "expected_columns": ["first_name", "last_name"],
+    "key_columns": [],
+    "difficulty": "easy",
+    "query_type": "insert"
+  },
+  {
+    "id": 3,
+    "question": "Update the last name of actor with ID 1 to 'Smith'.",
+    "sql": "UPDATE actor SET last_name = 'Smith' WHERE actor_id = 1;",
+    "expected_tables": ["actor"],
+    "expected_columns": ["last_name", "actor_id"],
+    "key_columns": ["actor_id"],
+    "difficulty": "easy",
+    "query_type": "update"
+  },
+  {
+    "id": 4,
+    "question": "Delete the actor with ID 2.",
+    "sql": "DELETE FROM actor WHERE actor_id = 2;",
+    "expected_tables": ["actor"],
+    "expected_columns": ["actor_id"],
+    "key_columns": ["actor_id"],
+    "difficulty": "easy",
+    "query_type": "delete"
+  },
+  {
+    "id": 5,
+    "question": "Show all films and their descriptions.",
+    "sql": "SELECT film_id, title, description FROM film;",
+    "expected_tables": ["film"],
+    "expected_columns": ["film_id", "title", "description"],
+    "key_columns": ["film_id"],
+    "difficulty": "easy",
+    "query_type": "select"
+  },
+  {
+    "id": 6,
+    "question": "Insert a new film titled 'New Movie' in language 1.",
+    "sql": "INSERT INTO film (title, language_id) VALUES ('New Movie', 1);",
+    "expected_tables": ["film"],
+    "expected_columns": ["title", "language_id"],
+    "key_columns": [],
+    "difficulty": "easy",
+    "query_type": "insert"
+  },
+  {
+    "id": 7,
+    "question": "Change the rating of film ID 3 to 'PG-13'.",
+    "sql": "UPDATE film SET rating = 'PG-13' WHERE film_id = 3;",
+    "expected_tables": ["film"],
+    "expected_columns": ["rating", "film_id"],
+    "key_columns": ["film_id"],
+    "difficulty": "easy",
+    "query_type": "update"
+  },
+  {
+    "id": 8,
+    "question": "Remove the film with ID 4.",
+    "sql": "DELETE FROM film WHERE film_id = 4;",
+    "expected_tables": ["film"],
+    "expected_columns": ["film_id"],
+    "key_columns": ["film_id"],
+    "difficulty": "easy",
+    "query_type": "delete"
+  },
+  {
+    "id": 9,
+    "question": "Retrieve all categories.",
+    "sql": "SELECT category_id, name FROM category;",
+    "expected_tables": ["category"],
+    "expected_columns": ["category_id", "name"],
+    "key_columns": ["category_id"],
+    "difficulty": "easy",
+    "query_type": "select"
+  },
+  {
+    "id": 10,
+    "question": "Add a new category 'Horror'.",
+    "sql": "INSERT INTO category (name) VALUES ('Horror');",
+    "expected_tables": ["category"],
+    "expected_columns": ["name"],
+    "key_columns": [],
+    "difficulty": "easy",
+    "query_type": "insert"
+  },
+  {
+    "id": 11,
+    "question": "List all customers with their store and email.",
+    "sql": "SELECT customer_id, store_id, email FROM customer;",
+    "expected_tables": ["customer"],
+    "expected_columns": ["customer_id", "store_id", "email"],
+    "key_columns": ["customer_id"],
+    "difficulty": "easy",
+    "query_type": "select"
+  },
+  {
+    "id": 12,
+    "question": "Show inventory items for film ID 5.",
+    "sql": "SELECT inventory_id, film_id, store_id FROM inventory WHERE film_id = 5;",
+    "expected_tables": ["inventory"],
+    "expected_columns": ["inventory_id", "film_id", "store_id"],
+    "key_columns": ["inventory_id", "film_id"],
+    "difficulty": "medium",
+    "query_type": "select"
+  },
+  {
+    "id": 13,
+    "question": "List recent rentals with rental date and customer.",
+    "sql": "SELECT rental_id, rental_date, customer_id FROM rental ORDER BY rental_date DESC LIMIT 10;",
+    "expected_tables": ["rental"],
+    "expected_columns": ["rental_id", "rental_date", "customer_id"],
+    "key_columns": ["rental_id"],
+    "difficulty": "medium",
+    "query_type": "select"
+  },
+  {
+    "id": 14,
+    "question": "Show all payments with amount and date.",
+    "sql": "SELECT payment_id, customer_id, amount, payment_date FROM payment;",
+    "expected_tables": ["payment"],
+    "expected_columns": ["payment_id", "customer_id", "amount", "payment_date"],
+    "key_columns": ["payment_id"],
+    "difficulty": "medium",
+    "query_type": "select"
+  },
+  {
+    "id": 15,
+    "question": "List all staff with names and email.",
+    "sql": "SELECT staff_id, first_name, last_name, email FROM staff;",
+    "expected_tables": ["staff"],
+    "expected_columns": ["staff_id", "first_name", "last_name", "email"],
+    "key_columns": ["staff_id"],
+    "difficulty": "easy",
+    "query_type": "select"
+  }
+] 

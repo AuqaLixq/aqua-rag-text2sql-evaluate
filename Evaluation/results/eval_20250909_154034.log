@@ -1,0 +1,151 @@
+15:40:34 [INFO] Starting evaluation with config: ../configs/salila_config_hf_debug.yaml
+15:40:34 [INFO] 正在加载嵌入模型...
+15:40:34 [INFO] Use pytorch device_name: cpu
+15:40:34 [INFO] Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+15:40:34 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+15:40:34 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+15:40:34 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+15:40:35 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+15:40:36 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+15:40:39 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+15:40:39 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+15:40:39 [DEBUG] https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+15:40:40 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+15:40:40 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+15:40:40 [DEBUG] https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6861
+15:40:40 [INFO] 正在加载Text2SQL生成模型...
+15:40:40 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+15:40:40 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/tokenizer_config.json HTTP/1.1" 200 0
+15:40:40 [DEBUG] https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+15:40:41 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/config.json HTTP/1.1" 307 0
+15:40:41 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/config.json HTTP/1.1" 200 0
+15:40:41 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/model.safetensors HTTP/1.1" 404 0
+15:40:41 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+15:40:42 [DEBUG] https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium HTTP/1.1" 200 4632
+15:40:42 [DEBUG] https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/commits/main HTTP/1.1" 200 5803
+15:40:42 [DEBUG] https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/discussions?p=0 HTTP/1.1" 200 12509
+15:40:43 [DEBUG] https://huggingface.co:443 "GET /api/models/microsoft/DialoGPT-medium/commits/refs%2Fpr%2F22 HTTP/1.1" 200 6768
+15:40:43 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/refs%2Fpr%2F22/model.safetensors.index.json HTTP/1.1" 404 0
+15:40:44 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/refs%2Fpr%2F22/model.safetensors HTTP/1.1" 302 0
+15:40:45 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/generation_config.json HTTP/1.1" 307 0
+15:40:45 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/microsoft/DialoGPT-medium/7b40bb0f92c45fefa957d088000d8648e5c7fa33/generation_config.json HTTP/1.1" 200 0
+15:40:45 [DEBUG] https://huggingface.co:443 "HEAD /microsoft/DialoGPT-medium/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+15:40:45 [INFO] Hugging Face模型加载完成
+15:40:45 [INFO] Hugging Face Text2SQL系统初始化成功
+15:40:45 [INFO] 知识库加载完成
+15:40:45 [INFO] 使用Hugging Face Text2SQL系统
+15:40:45 [INFO] Use pytorch device_name: cpu
+15:40:45 [INFO] Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+15:40:45 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+15:40:45 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+15:40:46 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+15:40:47 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+15:40:48 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+15:40:48 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+15:40:48 [DEBUG] https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+15:40:48 [DEBUG] https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+15:40:48 [DEBUG] https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+15:40:49 [DEBUG] https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6861
+15:40:49 [INFO] 开始Text2SQL系统评估
+15:40:49 [INFO] 成功加载测试数据集，共 15 条记录
+15:40:49 [INFO] Processing 15 samples
+15:40:49 [INFO] [ 1/15] List all actors with their IDs and names.
+15:40:49 [INFO] 评估查询 1: List all actors with their IDs and names.
+15:40:59 [INFO] [RAG] Retrieved tables (top): ['actor', 'actor_info', 'nicer_but_slower_film_list']
+15:40:59 [INFO] [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+15:40:59 [INFO] [ 2/15] Add a new actor named 'John Doe'.
+15:40:59 [INFO] 评估查询 2: Add a new actor named 'John Doe'.
+15:41:05 [INFO] [RAG] Retrieved tables (top): ['actor']
+15:41:05 [INFO] [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+15:41:05 [INFO] [ 3/15] Update the last name of actor with ID 1 to 'Smith'
+15:41:05 [INFO] 评估查询 3: Update the last name of actor with ID 1 to 'Smith'.
+15:41:14 [INFO] [RAG] Retrieved tables (top): ['actor', 'film_actor', 'actor_info']
+15:41:14 [INFO] [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+15:41:14 [INFO] [ 4/15] Delete the actor with ID 2.
+15:41:14 [INFO] 评估查询 4: Delete the actor with ID 2.
+15:41:21 [ERROR] SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_actor` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM actor WHERE actor_id = 2;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+15:41:21 [ERROR] SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_actor` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM actor WHERE actor_id = 2;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+15:41:23 [INFO] [RAG] Retrieved tables (top): ['actor', 'film_actor', 'actor_info']
+15:41:23 [INFO] [RAG] Description samples (top): ['actor.actor_id', 'actor.first_name', 'actor.last_name', 'actor.last_update']
+15:41:23 [INFO] [ 5/15] Show all films and their descriptions.
+15:41:23 [INFO] 评估查询 5: Show all films and their descriptions.
+15:41:31 [INFO] [RAG] Retrieved tables (top): ['film', 'film_text', 'nicer_but_slower_film_list']
+15:41:31 [INFO] [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+15:41:31 [INFO] Checkpoint: 5 queries
+15:41:31 [INFO] [ 6/15] Insert a new film titled 'New Movie' in language 1
+15:41:31 [INFO] 评估查询 6: Insert a new film titled 'New Movie' in language 1.
+15:41:39 [INFO] [RAG] Retrieved tables (top): ['film_text', 'language', 'film']
+15:41:39 [INFO] [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+15:41:39 [INFO] [ 7/15] Change the rating of film ID 3 to 'PG-13'.
+15:41:39 [INFO] 评估查询 7: Change the rating of film ID 3 to 'PG-13'.
+15:41:45 [INFO] [RAG] Retrieved tables (top): ['film', 'nicer_but_slower_film_list']
+15:41:45 [INFO] [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+15:41:45 [INFO] [ 8/15] Remove the film with ID 4.
+15:41:45 [INFO] 评估查询 8: Remove the film with ID 4.
+15:41:49 [ERROR] SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_film` FOREIGN KEY (`film_id`) REFERENCES `film` (`film_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM film WHERE film_id = 4;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+15:41:49 [ERROR] SQL执行失败: (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`sakila`.`film_actor`, CONSTRAINT `fk_film_actor_film` FOREIGN KEY (`film_id`) REFERENCES `film` (`film_id`) ON UPDATE CASCADE)')
+[SQL: DELETE FROM film WHERE film_id = 4;]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+15:41:51 [INFO] [RAG] Retrieved tables (top): ['film_category', 'film_actor', 'film_text']
+15:41:51 [INFO] [RAG] Description samples (top): []
+15:41:51 [INFO] [ 9/15] Retrieve all categories.
+15:41:51 [INFO] 评估查询 9: Retrieve all categories.
+15:41:55 [INFO] [RAG] Retrieved tables (top): ['category']
+15:41:55 [INFO] [RAG] Description samples (top): ['category.category_id', 'category.last_update', 'category.name']
+15:41:55 [INFO] [10/15] Add a new category 'Horror'.
+15:41:55 [INFO] 评估查询 10: Add a new category 'Horror'.
+15:41:59 [INFO] [RAG] Retrieved tables (top): []
+15:41:59 [INFO] [RAG] Description samples (top): []
+15:41:59 [INFO] Checkpoint: 10 queries
+15:41:59 [INFO] [11/15] List all customers with their store and email.
+15:41:59 [INFO] 评估查询 11: List all customers with their store and email.
+15:42:05 [INFO] [RAG] Retrieved tables (top): ['customer_list']
+15:42:05 [INFO] [RAG] Description samples (top): []
+15:42:05 [INFO] [12/15] Show inventory items for film ID 5.
+15:42:05 [INFO] 评估查询 12: Show inventory items for film ID 5.
+15:42:13 [INFO] [RAG] Retrieved tables (top): ['film_text', 'film', 'inventory']
+15:42:13 [INFO] [RAG] Description samples (top): ['film.description', 'film.film_id', 'film.language_id', 'film.last_update', 'film.length']
+15:42:13 [INFO] [13/15] List recent rentals with rental date and customer.
+15:42:13 [INFO] 评估查询 13: List recent rentals with rental date and customer.
+15:42:20 [INFO] [RAG] Retrieved tables (top): ['sales_by_store', 'rental', 'film']
+15:42:20 [INFO] [RAG] Description samples (top): ['rental.customer_id', 'rental.inventory_id', 'rental.last_update', 'rental.rental_date', 'rental.rental_id']
+15:42:20 [INFO] [14/15] Show all payments with amount and date.
+15:42:20 [INFO] 评估查询 14: Show all payments with amount and date.
+15:42:27 [INFO] [RAG] Retrieved tables (top): ['payment', 'sales_by_store']
+15:42:27 [INFO] [RAG] Description samples (top): ['payment.amount', 'payment.customer_id', 'payment.last_update', 'payment.payment_date', 'payment.payment_id']
+15:42:27 [INFO] [15/15] List all staff with names and email.
+15:42:27 [INFO] 评估查询 15: List all staff with names and email.
+15:42:31 [INFO] [RAG] Retrieved tables (top): ['staff_list']
+15:42:31 [INFO] [RAG] Description samples (top): []
+15:42:31 [INFO] Checkpoint: 15 queries
+15:42:31 [INFO] 结果已保存到: ..\results\evaluation_results_20250909_154231.json
+15:42:31 [INFO] HTML报告已生成: ..\results\evaluation_report_20250909_154231.html
+15:42:31 [INFO] Evaluation complete

@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-09-09T14:05:29.101467",
+  "total_queries": 15,
+  "overall_metrics": {
+    "total_queries": 15,
+    "syntax_accuracy": {
+      "mean": 0.0,
+      "valid_rate": 0.0
+    },
+    "semantic_similarity": {
+      "mean": 0.0
+    },
+    "retrieval_recall": {
+      "table_recall_mean": 0.0,
+      "column_recall_mean": 0.0,
+      "key_column_recall_mean": 0.0,
+      "weighted_recall_mean": 0.0,
+      "overall_recall_mean": 0.0,
+      "table_analysis": {
+        "total_expected": 11,
+        "total_retrieved": 0,
+        "total_matched": 0,
+        "overall_precision": 0.0,
+        "overall_recall": 0.0,
+        "most_missed_tables": [
+          [
+            "actor",
+            3
+          ],
+          [
+            "category",
+            2
+          ],
+          [
+            "film",
+            1
+          ],
+          [
+            "customer",
+            1
+          ],
+          [
+            "inventory",
+            1
+          ]
+        ]
+      },
+      "column_analysis": {
+        "total_expected": 30,
+        "total_retrieved": 0,
+        "total_matched": 0,
+        "overall_precision": 0.0,
+        "overall_recall": 0.0,
+        "most_missed_columns": [
+          [
+            "last_name",
+            4
+          ],
+          [
+            "first_name",
+            3
+          ],
+          [
+            "customer_id",
+            3
+          ],
+          [
+            "actor_id",
+            2
+          ],
+          [
+            "film_id",
+            2
+          ]
+        ]
+      },
+      "key_column_analysis": {
+        "total_expected": 10,
+        "total_matched": 0,
+        "overall_recall": 0.0,
+        "average_coverage": 0.0,
+        "most_missed_key_columns": [
+          [
+            "actor_id",
+            2
+          ],
+          [
+            "film_id",
+            2
+          ],
+          [
+            "category_id",
+            1
+          ],
+          [
+            "customer_id",
+            1
+          ],
+          [
+            "inventory_id",
+            1
+          ]
+        ]
+      },
+      "sql_type_analysis": {
+        "type_distribution": {
+          "UNKNOWN": 15
+        },
+        "type_performance": {
+          "UNKNOWN": {
+            "count": 15,
+            "average_score": 0.0,
+            "min_score": 0.0,
+            "max_score": 0.0
+          }
+        }
+      }
+    },
+    "execution_accuracy": {
+      "mean": 0.0,
+      "success_rate": 0.0
+    },
+    "weighted_overall_score": 0.0
+  }
+}

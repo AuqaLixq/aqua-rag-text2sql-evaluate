@@ -1,0 +1,95 @@
+# Salila Text2SQL 评估配置 - 真实Sakila数据集（模拟模式）
+evaluation:
+  name: "Sakila Text2SQL 真实数据评估（模拟模式）"
+  description: "使用真实Sakila数据集进行Text2SQL系统评估，但不连接真实数据库"
+  output_path: "../results"
+  dataset_path: "../datasets/sakila_real.json"
+  
+# 数据集配置
+dataset:
+  # 使用转换后的Sakila数据集
+  test_file: "../datasets/sakila_real.json"
+  
+  # 数据库知识库文件
+  ddl_file: "../Data/sakila/ddl_statements.yaml"
+  db_description_file: "../Data/sakila/db_description.yaml"
+
+# 数据库连接配置（模拟模式）
+database:
+  enabled: false  # 禁用真实数据库连接
+  type: "mock"
+  connection_string: "sqlite:///:memory:"  # 模拟连接字符串
+
+# Text2SQL系统配置
+text2sql_system:
+  type: "rag"  # 使用RAG系统
+  
+  # OpenAI配置
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4o-mini"
+    embedding_model: "text-embedding-3-small"
+    temperature: 0.1
+    max_tokens: 1000
+  
+  # RAG检索配置
+  retrieval:
+    top_k: 5
+    similarity_threshold: 0.7
+    use_vector_db: false  # 使用简化版本，不需要Milvus
+
+# 评估指标配置
+metrics:
+  # 执行准确率（禁用）
+  execution_accuracy:
+    enabled: false
+    weight: 0.0
+  
+  # 语法正确率
+  syntax_accuracy:
+    enabled: true
+    weight: 0.4  # 增加权重
+  
+  # 语义相似度
+  semantic_similarity:
+    enabled: true
+    weight: 0.3  # 增加权重
+    embedding_weight: 0.7  # 嵌入相似度权重
+    structural_weight: 0.3  # 结构相似度权重
+  
+  # 检索召回率
+  retrieval_recall:
+    enabled: true
+    weight: 0.3  # 增加权重
+    table_weight: 0.4
+    column_weight: 0.4
+    key_column_weight: 0.2
+
+# 报告配置
+reporting:
+  # 输出目录
+  output_dir: "../results"
+  
+  # 报告格式
+  formats:
+    - "json"
+    - "html"
+  
+  # 生成选项
+  generate_json: true
+  generate_html: true
+  
+  # 详细程度
+  detail_level: "full"  # full, summary, minimal
+  
+  # 是否保存中间结果
+  save_intermediate: true
+  
+  # HTML报告样式
+  html_style: "modern"
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "../logs/evaluation.log" 

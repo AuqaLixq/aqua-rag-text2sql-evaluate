@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-09-09T15:03:16.788220",
+  "total_queries": 1,
+  "overall_metrics": {
+    "total_queries": 1,
+    "syntax_accuracy": {
+      "mean": 1.0,
+      "valid_rate": 1.0
+    },
+    "semantic_similarity": {
+      "mean": 0.9999999582767487
+    },
+    "retrieval_recall": {
+      "table_recall_mean": 1.0,
+      "column_recall_mean": 0.0,
+      "key_column_recall_mean": 0.0,
+      "weighted_recall_mean": 0.5,
+      "overall_recall_mean": 0.5,
+      "table_analysis": {
+        "total_expected": 1,
+        "total_retrieved": 3,
+        "total_matched": 1,
+        "overall_precision": 0.3333333333333333,
+        "overall_recall": 1.0,
+        "most_missed_tables": []
+      },
+      "column_analysis": {
+        "total_expected": 3,
+        "total_retrieved": 29,
+        "total_matched": 0,
+        "overall_precision": 0.0,
+        "overall_recall": 0.0,
+        "most_missed_columns": [
+          [
+            "first_name",
+            1
+          ],
+          [
+            "last_name",
+            1
+          ],
+          [
+            "actor_id",
+            1
+          ]
+        ]
+      },
+      "key_column_analysis": {
+        "total_expected": 1,
+        "total_matched": 0,
+        "overall_recall": 0.0,
+        "average_coverage": 0.0,
+        "most_missed_key_columns": [
+          [
+            "actor_id",
+            1
+          ]
+        ]
+      },
+      "sql_type_analysis": {
+        "type_distribution": {
+          "UNKNOWN": 1
+        },
+        "type_performance": {
+          "UNKNOWN": {
+            "count": 1,
+            "average_score": 0.0,
+            "min_score": 0.0,
+            "max_score": 0.0
+          }
+        }
+      }
+    },
+    "execution_accuracy": {
+      "mean": 1.0,
+      "success_rate": 1.0
+    },
+    "weighted_overall_score": 0.8999999916553498
+  }
+}

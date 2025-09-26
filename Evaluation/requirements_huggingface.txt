@@ -1,0 +1,25 @@
+# Hugging Face Text2SQL系统依赖包
+# 基础依赖
+torch>=1.9.0
+transformers>=4.21.0
+sentence-transformers>=2.2.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# 数据库相关
+sqlalchemy>=2.0.0
+pymysql>=1.0.0
+
+# 配置和工具
+pyyaml>=6.0
+python-dotenv>=0.19.0
+
+# 可选：加速库
+# accelerate>=0.20.0  # 用于模型加速
+# bitsandbytes>=0.39.0  # 用于量化（可选）
+
+# 注意：
+# 1. 首次运行时会自动下载模型，需要网络连接
+# 2. 模型文件较大，建议有足够的磁盘空间（至少2-3GB）
+# 3. 如果GPU可用，会自动使用GPU加速
+# 4. 如果内存不足，可以考虑使用量化模型

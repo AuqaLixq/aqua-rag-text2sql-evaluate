@@ -1,0 +1,67 @@
+# Salila Text2SQL 评估配置文件 - 调试版本
+evaluation:
+  name: "Text2SQL-Sakila-Evaluation-Debug"
+  description: "基于Sakila数据库的Text2SQL系统评估（调试模式）"
+  dataset_path: "../datasets/sakila_test.json"
+  output_path: "../results/"
+  log_level: "DEBUG"  # 更详细的日志
+  mock_mode: true     # 使用模拟模式，避免API密钥问题
+  debug_mode: true    # 调试模式：只运行第一条数据
+  
+# 数据库配置
+database:
+  type: "mysql"
+  connection_string: "mysql+pymysql://root:password@localhost:3306/sakila"
+  test_db_name: "sakila_test"
+  schema_path: "../../Data/sakila/ddl_statements.yaml"
+  description_path: "../../Data/sakila/db_description.yaml"
+  isolation_mode: true
+
+# Text2SQL系统配置
+model:
+  system_path: "../../Text2SQL/Sakila/05-text2sql-rag-v3-agent.py"
+  max_retries: 3
+  timeout: 30
+  embedding_model: "text-embedding-3-large"
+  llm_model: "gpt-4o-mini"
+
+# 评估指标配置
+metrics:
+  execution_accuracy:
+    enabled: true
+    weight: 0.4
+    description: "SQL执行准确率"
+    
+  syntax_accuracy:
+    enabled: true
+    weight: 0.2
+    description: "SQL语法正确率"
+    
+  semantic_similarity:
+    enabled: true
+    weight: 0.2
+    description: "语义相似度"
+    threshold: 0.8
+    
+  retrieval_recall:
+    enabled: true
+    weight: 0.2
+    description: "检索召回率"
+    levels:
+      - "table_level"
+      - "column_level"
+      - "key_column_level"
+
+# RAG检索配置
+retrieval:
+  top_k_ddl: 3
+  top_k_examples: 3
+  top_k_descriptions: 5
+  similarity_threshold: 0.7
+
+# 报告配置
+reporting:
+  generate_html: true
+  generate_json: true
+  include_visualizations: true
+  detailed_error_analysis: true

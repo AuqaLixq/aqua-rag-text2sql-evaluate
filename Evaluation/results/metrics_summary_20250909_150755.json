@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-09-09T15:07:55.650849",
+  "total_queries": 15,
+  "overall_metrics": {
+    "total_queries": 15,
+    "syntax_accuracy": {
+      "mean": 1.0,
+      "valid_rate": 1.0
+    },
+    "semantic_similarity": {
+      "mean": 0.9999999944368999
+    },
+    "retrieval_recall": {
+      "table_recall_mean": 0.7333333333333333,
+      "column_recall_mean": 0.2,
+      "key_column_recall_mean": 0.22888888888888886,
+      "weighted_recall_mean": 0.503904761904762,
+      "overall_recall_mean": 0.503904761904762,
+      "table_analysis": {
+        "total_expected": 15,
+        "total_retrieved": 32,
+        "total_matched": 11,
+        "overall_precision": 0.34375,
+        "overall_recall": 0.7333333333333333,
+        "most_missed_tables": [
+          [
+            "film",
+            1
+          ],
+          [
+            "category",
+            1
+          ],
+          [
+            "customer",
+            1
+          ],
+          [
+            "staff",
+            1
+          ]
+        ]
+      },
+      "column_analysis": {
+        "total_expected": 61,
+        "total_retrieved": 399,
+        "total_matched": 18,
+        "overall_precision": 0.045112781954887216,
+        "overall_recall": 0.29508196721311475,
+        "most_missed_columns": [
+          [
+            "last_name",
+            4
+          ],
+          [
+            "film_id",
+            4
+          ],
+          [
+            "first_name",
+            3
+          ],
+          [
+            "actor_id",
+            3
+          ],
+          [
+            "customer_id",
+            3
+          ]
+        ]
+      },
+      "key_column_analysis": {
+        "total_expected": 26,
+        "total_matched": 10,
+        "overall_recall": 0.38461538461538464,
+        "average_coverage": 0.1111111111111111,
+        "most_missed_key_columns": [
+          [
+            "film_id",
+            4
+          ],
+          [
+            "actor_id",
+            3
+          ],
+          [
+            "category_id",
+            1
+          ],
+          [
+            "customer.store_id",
+            1
+          ],
+          [
+            "customer_id",
+            1
+          ]
+        ]
+      },
+      "sql_type_analysis": {
+        "type_distribution": {
+          "UNKNOWN": 15
+        },
+        "type_performance": {
+          "UNKNOWN": {
+            "count": 15,
+            "average_score": 0.0,
+            "min_score": 0.0,
+            "max_score": 0.0
+          }
+        }
+      }
+    },
+    "execution_accuracy": {
+      "mean": 0.8666666666666667,
+      "success_rate": 0.8666666666666667
+    },
+    "weighted_overall_score": 0.8474476179349991
+  }
+}
